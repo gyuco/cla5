@@ -1,0 +1,937 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="generator" content="ApiGen 2.8.0" />
+
+	<title>Class ActiveRecord\Config | cla</title>
+
+	<script type="text/javascript" src="resources/combined.js?1870581387"></script>
+	<script type="text/javascript" src="elementlist.js?1416327697"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?3505392360" />
+
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+			<h3>Namespaces</h3>
+			<ul>
+				<li class="active"><a href="namespace-ActiveRecord.html">ActiveRecord</a>
+						</li>
+				<li><a href="namespace-app.html">app<span></span></a>
+						<ul>
+				<li><a href="namespace-app.cli.html">cli</a>
+						</li>
+				<li><a href="namespace-app.controllers.html">controllers</a>
+						</li>
+				<li><a href="namespace-app.models.html">models</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-cla.html">cla<span></span></a>
+						<ul>
+				<li><a href="namespace-cla.cli.html">cli</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Composer.html">Composer<span></span></a>
+						<ul>
+				<li><a href="namespace-Composer.Autoload.html">Autoload</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-DebugBar.html">DebugBar<span></span></a>
+						<ul>
+				<li><a href="namespace-DebugBar.Bridge.html">Bridge<span></span></a>
+						<ul>
+				<li><a href="namespace-DebugBar.Bridge.SwiftMailer.html">SwiftMailer</a>
+						</li>
+				<li><a href="namespace-DebugBar.Bridge.Twig.html">Twig</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-DebugBar.DataCollector.html">DataCollector<span></span></a>
+						<ul>
+				<li><a href="namespace-DebugBar.DataCollector.PDO.html">PDO</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-DebugBar.Storage.html">Storage</a>
+						</li>
+				<li><a href="namespace-DebugBar.Tests.html">Tests<span></span></a>
+						<ul>
+				<li><a href="namespace-DebugBar.Tests.DataCollector.html">DataCollector</a>
+						</li>
+				<li><a href="namespace-DebugBar.Tests.Storage.html">Storage</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="namespace-foo.html">foo<span></span></a>
+						<ul>
+				<li><a href="namespace-foo.bar.html">bar<span></span></a>
+						<ul>
+				<li><a href="namespace-foo.bar.biz.html">biz</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="namespace-Klein.html">Klein<span></span></a>
+						<ul>
+				<li><a href="namespace-Klein.DataCollection.html">DataCollection</a>
+						</li>
+				<li><a href="namespace-Klein.Exceptions.html">Exceptions</a>
+						</li>
+				<li><a href="namespace-Klein.Tests.html">Tests<span></span></a>
+						<ul>
+				<li><a href="namespace-Klein.Tests.DataCollection.html">DataCollection</a>
+						</li>
+				<li><a href="namespace-Klein.Tests.Mocks.html">Mocks</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="namespace-NamespaceTest.html">NamespaceTest<span></span></a>
+						<ul>
+				<li><a href="namespace-NamespaceTest.SubNamespaceTest.html">SubNamespaceTest</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-None.html">None</a>
+						</li>
+				<li><a href="namespace-PHP.html">PHP</a>
+						</li>
+				<li><a href="namespace-Psr.html">Psr<span></span></a>
+						<ul>
+				<li><a href="namespace-Psr.Log.html">Log<span></span></a>
+						<ul>
+				<li><a href="namespace-Psr.Log.Test.html">Test</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="namespace-Whoops.html">Whoops<span></span></a>
+						<ul>
+				<li><a href="namespace-Whoops.Example.html">Example</a>
+						</li>
+				<li><a href="namespace-Whoops.Exception.html">Exception</a>
+						</li>
+				<li><a href="namespace-Whoops.Handler.html">Handler</a>
+						</li>
+				<li><a href="namespace-Whoops.Provider.html">Provider<span></span></a>
+						<ul>
+				<li><a href="namespace-Whoops.Provider.Phalcon.html">Phalcon</a>
+						</li>
+				<li><a href="namespace-Whoops.Provider.Silex.html">Silex</a>
+						</li>
+				<li><a href="namespace-Whoops.Provider.Zend.html">Zend</a>
+						</li>
+							</ul></li></ul></li>
+			</ul>
+		</div>
+
+		<hr />
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-ActiveRecord.AbstractRelationship.html">AbstractRelationship</a></li>
+				<li><a href="class-ActiveRecord.ArraySerializer.html">ArraySerializer</a></li>
+				<li><a href="class-ActiveRecord.BelongsTo.html">BelongsTo</a></li>
+				<li><a href="class-ActiveRecord.Cache.html">Cache</a></li>
+				<li><a href="class-ActiveRecord.CallBack.html">CallBack</a></li>
+				<li><a href="class-ActiveRecord.Column.html">Column</a></li>
+				<li class="active"><a href="class-ActiveRecord.Config.html">Config</a></li>
+				<li><a href="class-ActiveRecord.Connection.html">Connection</a></li>
+				<li><a href="class-ActiveRecord.ConnectionManager.html">ConnectionManager</a></li>
+				<li><a href="class-ActiveRecord.CsvSerializer.html">CsvSerializer</a></li>
+				<li><a href="class-ActiveRecord.DateTime.html">DateTime</a></li>
+				<li><a href="class-ActiveRecord.Errors.html">Errors</a></li>
+				<li><a href="class-ActiveRecord.Expressions.html">Expressions</a></li>
+				<li><a href="class-ActiveRecord.HasAndBelongsToMany.html">HasAndBelongsToMany</a></li>
+				<li><a href="class-ActiveRecord.HasMany.html">HasMany</a></li>
+				<li><a href="class-ActiveRecord.HasOne.html">HasOne</a></li>
+				<li><a href="class-ActiveRecord.Inflector.html">Inflector</a></li>
+				<li><a href="class-ActiveRecord.JsonSerializer.html">JsonSerializer</a></li>
+				<li><a href="class-ActiveRecord.Memcache.html">Memcache</a></li>
+				<li><a href="class-ActiveRecord.Model.html">Model</a></li>
+				<li><a href="class-ActiveRecord.MysqlAdapter.html">MysqlAdapter</a></li>
+				<li><a href="class-ActiveRecord.OciAdapter.html">OciAdapter</a></li>
+				<li><a href="class-ActiveRecord.PgsqlAdapter.html">PgsqlAdapter</a></li>
+				<li><a href="class-ActiveRecord.Reflections.html">Reflections</a></li>
+				<li><a href="class-ActiveRecord.Serialization.html">Serialization</a></li>
+				<li><a href="class-ActiveRecord.Singleton.html">Singleton</a></li>
+				<li><a href="class-ActiveRecord.SQLBuilder.html">SQLBuilder</a></li>
+				<li><a href="class-ActiveRecord.SqliteAdapter.html">SqliteAdapter</a></li>
+				<li><a href="class-ActiveRecord.StandardInflector.html">StandardInflector</a></li>
+				<li><a href="class-ActiveRecord.Table.html">Table</a></li>
+				<li><a href="class-ActiveRecord.Utils.html">Utils</a></li>
+				<li><a href="class-ActiveRecord.Validations.html">Validations</a></li>
+				<li><a href="class-ActiveRecord.XmlSerializer.html">XmlSerializer</a></li>
+			</ul>
+
+			<h3>Interfaces</h3>
+			<ul>
+				<li><a href="class-ActiveRecord.InterfaceRelationship.html">InterfaceRelationship</a></li>
+			</ul>
+
+
+			<h3>Exceptions</h3>
+			<ul>
+				<li><a href="class-ActiveRecord.ActiveRecordException.html">ActiveRecordException</a></li>
+				<li><a href="class-ActiveRecord.ConfigException.html">ConfigException</a></li>
+				<li><a href="class-ActiveRecord.DatabaseException.html">DatabaseException</a></li>
+				<li><a href="class-ActiveRecord.ExpressionsException.html">ExpressionsException</a></li>
+				<li><a href="class-ActiveRecord.HasManyThroughAssociationException.html">HasManyThroughAssociationException</a></li>
+				<li><a href="class-ActiveRecord.ModelException.html">ModelException</a></li>
+				<li><a href="class-ActiveRecord.ReadOnlyException.html">ReadOnlyException</a></li>
+				<li><a href="class-ActiveRecord.RecordNotFound.html">RecordNotFound</a></li>
+				<li><a href="class-ActiveRecord.RelationshipException.html">RelationshipException</a></li>
+				<li><a href="class-ActiveRecord.UndefinedPropertyException.html">UndefinedPropertyException</a></li>
+				<li><a href="class-ActiveRecord.ValidationsArgumentError.html">ValidationsArgumentError</a></li>
+			</ul>
+
+
+			<h3>Functions</h3>
+			<ul>
+				<li><a href="function-ActiveRecord.all.html">all</a></li>
+				<li><a href="function-ActiveRecord.array_flatten.html">array_flatten</a></li>
+				<li><a href="function-ActiveRecord.classify.html">classify</a></li>
+				<li><a href="function-ActiveRecord.collect.html">collect</a></li>
+				<li><a href="function-ActiveRecord.denamespace.html">denamespace</a></li>
+				<li><a href="function-ActiveRecord.get_namespaces.html">get_namespaces</a></li>
+				<li><a href="function-ActiveRecord.has_absolute_namespace.html">has_absolute_namespace</a></li>
+				<li><a href="function-ActiveRecord.has_namespace.html">has_namespace</a></li>
+				<li><a href="function-ActiveRecord.is_hash.html">is_hash</a></li>
+				<li><a href="function-ActiveRecord.wrap_strings_in_arrays.html">wrap_strings_in_arrays</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="" />
+		<input type="hidden" name="ie" value="UTF-8" />
+		<input type="text" name="q" class="text" />
+		<input type="submit" value="Search" />
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="namespace-ActiveRecord.html" title="Summary of ActiveRecord"><span>Namespace</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class Config</h1>
+
+
+	<div class="description">
+	
+<p>Manages configuration options for ActiveRecord.</p>
+
+<pre>
+ActiveRecord::initialize(<span class="php-keyword1">function</span>(<span
+class="php-var">$cfg</span>) {
+  <span
+class="php-var">$cfg</span>-&gt;set_model_home(<span
+class="php-quote">'models'</span>);
+  <span
+class="php-var">$cfg</span>-&gt;set_connections(<span
+class="php-keyword1">array</span>(
+    <span
+class="php-quote">'development'</span> =&gt; <span
+class="php-quote">'mysql://user:pass@development.com/awesome_development'</span>,
+    <span
+class="php-quote">'production'</span> =&gt; <span
+class="php-quote">'mysql://user:pass@production.com/awesome_production'</span>));
+});
+</pre>
+
+	</div>
+
+	<dl class="tree">
+		<dd style="padding-left:0px">
+			<a href="class-ActiveRecord.Singleton.html"><span>ActiveRecord\Singleton</span></a>
+			
+			
+			
+		</dd>
+		<dd style="padding-left:30px">
+			<img src="resources/inherit.png" alt="Extended by" />
+<b><span>ActiveRecord\Config</span></b>			
+			
+			
+		</dd>
+	</dl>
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		<b>Namespace:</b> <a href="namespace-ActiveRecord.html">ActiveRecord</a><br />
+		<b>Package:</b> ActiveRecord<br />
+
+		<b>Located at</b> <a href="source-class-ActiveRecord.Config.html#8-303" title="Go to source code">vendor/php-activerecord/php-activerecord/lib/Config.php</a><br />
+	</div>
+
+
+
+	<table class="summary" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="initialize" id="_initialize">
+
+		<td class="attributes"><code>
+			 public static
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_initialize">#</a>
+		<code><a href="source-class-ActiveRecord.Config.html#82-110" title="Go to source code">initialize</a>( <span><code><a href="class-Closure.html">Closure</a></code> <var>$initializer</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Allows config initialization using a closure.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Allows config initialization using a closure.</p>
+
+<p>This method is just syntatic sugar.</p>
+
+<pre>
+ActiveRecord\Config::initialize(<span
+class="php-keyword1">function</span>(<span
+class="php-var">$cfg</span>) {
+  <span
+class="php-var">$cfg</span>-&gt;set_model_directory(<span
+class="php-quote">'/path/to/your/model_directory'</span>);
+  <span
+class="php-var">$cfg</span>-&gt;set_connections(<span
+class="php-keyword1">array</span>(
+    <span
+class="php-quote">'development'</span> =&gt; <span
+class="php-quote">'mysql://username:password@127.0.0.1/database_name'</span>));
+});
+</pre>
+
+<p>You can also initialize by grabbing the singleton object:</p>
+
+<pre>
+<span class="php-var">$cfg</span> = ActiveRecord\Config::instance();
+<span
+class="php-var">$cfg</span>-&gt;set_model_directory(<span
+class="php-quote">'/path/to/your/model_directory'</span>);
+<span
+class="php-var">$cfg</span>-&gt;set_connections(<span
+class="php-keyword1">array</span>(<span
+class="php-quote">'development'</span> =&gt;
+  <span
+class="php-quote">'mysql://username:password@localhost/database_name'</span>));
+</pre>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$initializer</var></dt>
+					<dd><code><code><a href="class-Closure.html">Closure</a></code></code><br>$initializer A closure</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="set_connections" id="_set_connections">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_set_connections">#</a>
+		<code><a href="source-class-ActiveRecord.Config.html#112-134" title="Go to source code">set_connections</a>( <span>array <var>$connections</var></span>, <span>string <var>$default_connection</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Sets the list of database connection strings.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Sets the list of database connection strings.</p>
+
+<pre>
+<span class="php-var">$config</span>-&gt;set_connections(<span
+class="php-keyword1">array</span>(
+    <span
+class="php-quote">'development'</span> =&gt; <span
+class="php-quote">'mysql://username:password@127.0.0.1/database_name'</span>));
+</pre>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$connections</var></dt>
+					<dd><code>array</code><br>$connections Array of connections</dd>
+					<dt><var>$default_connection</var></dt>
+					<dd><code>string</code><br>$default_connection Optionally specify the default_connection</dd>
+				</dl></div>
+
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><code><a href="class-ActiveRecord.ConfigException.html">ActiveRecord\ConfigException</a></code></code><br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="get_connections" id="_get_connections">
+
+		<td class="attributes"><code>
+			 public 
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_get_connections">#</a>
+		<code><a href="source-class-ActiveRecord.Config.html#136-144" title="Go to source code">get_connections</a>( )</code>
+
+		<div class="description short">
+			
+<p>Returns the connection strings array.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns the connection strings array.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="get_connection" id="_get_connection">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_get_connection">#</a>
+		<code><a href="source-class-ActiveRecord.Config.html#146-158" title="Go to source code">get_connection</a>( <span>string <var>$name</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Returns a connection string if found otherwise null.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns a connection string if found otherwise null.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$name</var></dt>
+					<dd><code>string</code><br>$name Name of connection to retrieve</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>connection info for specified connection name<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="get_default_connection_string" id="_get_default_connection_string">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_get_default_connection_string">#</a>
+		<code><a href="source-class-ActiveRecord.Config.html#160-169" title="Go to source code">get_default_connection_string</a>( )</code>
+
+		<div class="description short">
+			
+<p>Returns the default connection string or null if there is none.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns the default connection string or null if there is none.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="get_default_connection" id="_get_default_connection">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_get_default_connection">#</a>
+		<code><a href="source-class-ActiveRecord.Config.html#171-179" title="Go to source code">get_default_connection</a>( )</code>
+
+		<div class="description short">
+			
+<p>Returns the name of the default connection.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns the name of the default connection.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="set_default_connection" id="_set_default_connection">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_set_default_connection">#</a>
+		<code><a href="source-class-ActiveRecord.Config.html#181-190" title="Go to source code">set_default_connection</a>( <span>string <var>$name</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Set the name of the default connection.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Set the name of the default connection.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$name</var></dt>
+					<dd><code>string</code><br>$name Name of a connection in the connections array</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="set_model_directory" id="_set_model_directory">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_set_model_directory">#</a>
+		<code><a href="source-class-ActiveRecord.Config.html#192-201" title="Go to source code">set_model_directory</a>( <span>string <var>$dir</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Sets the directory where models are located.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Sets the directory where models are located.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$dir</var></dt>
+					<dd><code>string</code><br>$dir Directory path containing your models</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="get_model_directory" id="_get_model_directory">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_get_model_directory">#</a>
+		<code><a href="source-class-ActiveRecord.Config.html#203-215" title="Go to source code">get_model_directory</a>( )</code>
+
+		<div class="description short">
+			
+<p>Returns the model directory.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns the model directory.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><code><a href="class-ActiveRecord.ConfigException.html">ActiveRecord\ConfigException</a></code></code><br>if specified directory was not found<br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="set_logging" id="_set_logging">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_set_logging">#</a>
+		<code><a href="source-class-ActiveRecord.Config.html#217-226" title="Go to source code">set_logging</a>( <span>boolean <var>$bool</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Turn on/off logging</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Turn on/off logging</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$bool</var></dt>
+					<dd><code>boolean</code><br>$bool</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="set_logger" id="_set_logger">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_set_logger">#</a>
+		<code><a href="source-class-ActiveRecord.Config.html#228-243" title="Go to source code">set_logger</a>( <span>object <var>$logger</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Sets the logger object for future SQL logging</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Sets the logger object for future SQL logging</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$logger</var></dt>
+					<dd><code>object</code><br>$logger</dd>
+				</dl></div>
+
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><code><a href="class-ActiveRecord.ConfigException.html">ActiveRecord\ConfigException</a></code></code><br>if Logger objecct does not implement public log()<br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="get_logging" id="_get_logging">
+
+		<td class="attributes"><code>
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_get_logging">#</a>
+		<code><a href="source-class-ActiveRecord.Config.html#245-253" title="Go to source code">get_logging</a>( )</code>
+
+		<div class="description short">
+			
+<p>Return whether or not logging is on</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Return whether or not logging is on</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="get_logger" id="_get_logger">
+
+		<td class="attributes"><code>
+			 public 
+			object
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_get_logger">#</a>
+		<code><a href="source-class-ActiveRecord.Config.html#255-263" title="Go to source code">get_logger</a>( )</code>
+
+		<div class="description short">
+			
+<p>Returns the logger</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns the logger</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>object</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="set_cache" id="_set_cache">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_set_cache">#</a>
+		<code><a href="source-class-ActiveRecord.Config.html#283-302" title="Go to source code">set_cache</a>( <span>string <var>$url</var></span>, <span>array <var>$options</var> = <span class="php-keyword1">array</span>()</span> )</code>
+
+		<div class="description short">
+			
+<p>Sets the url for the cache server to enable query caching.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Sets the url for the cache server to enable query caching.</p>
+
+<p>Only table schema queries are cached at the moment. A general query cache
+will follow.</p>
+
+<p>Example:</p>
+
+<pre>
+<span class="php-var">$config</span>-&gt;set_cache(<span
+class="php-quote">&quot;memcached://localhost&quot;</span>);
+<span
+class="php-var">$config</span>-&gt;set_cache(<span
+class="php-quote">&quot;memcached://localhost&quot;</span>,<span
+class="php-keyword1">array</span>(<span
+class="php-quote">&quot;expire&quot;</span> =&gt; <span
+class="php-num">60</span>));
+</pre>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$url</var></dt>
+					<dd><code>string</code><br>$url Url to your cache server.</dd>
+					<dt><var>$options</var></dt>
+					<dd><code>array</code><br>$options Array of options</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="class-ActiveRecord.Singleton.html#methods">ActiveRecord\Singleton</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-ActiveRecord.Singleton.html#_get_called_class">get_called_class()</a>, 
+			<a href="class-ActiveRecord.Singleton.html#_instance">instance()</a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		cla API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+</div>
+</body>
+</html>

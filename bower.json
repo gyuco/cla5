@@ -1,0 +1,16 @@
+{
+  "name": "Cla5",
+  "dependencies": {
+  },
+  "version": "1.5.1",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "assets/",
+    "test",
+    "tests"
+  ]
+}

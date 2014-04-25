@@ -1,0 +1,25 @@
+{
+   "name": "GC/Cla",
+   "license": "MIT",
+   "authors": [
+      {
+         "name": "Giuseppe Concas",
+         "email": "giuseppe.concas@gmail.com"
+      }
+   ],
+    "require": {
+            "php": ">=5.3.0",
+            "psr/log": "~1.0",
+            "php-activerecord/php-activerecord": "v1.1.2",
+            "tracy/tracy": "dev-master",
+            "corneltek/pux": "dev-master",
+            "league/plates": "dev-master"
+    },
+    "autoload": {
+            "psr-0": {
+                    "app": "/",
+                    "cla": "/"
+            }
+    }
+
+}

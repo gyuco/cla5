@@ -1,0 +1,11 @@
+body {
+    background-color: #39152e;
+}
+.centered{
+    width:270px;
+    height:150px;
+    position:absolute;
+    left:50%;
+    top:50%;
+    margin:-75px 0 0 -135px;
+}
