@@ -1,5 +1,5 @@
 {
-   "name": "GC/Cla",
+   "name": "gyuco/cla5",
    "license": "MIT",
    "authors": [
       {
@@ -13,7 +13,8 @@
             "php-activerecord/php-activerecord": "v1.1.2",
             "tracy/tracy": "dev-master",
             "corneltek/pux": "dev-master",
-            "league/plates": "dev-master"
+            "league/plates": "dev-master",
+            "nategood/commando": "*"
     },
     "autoload": {
             "psr-0": {

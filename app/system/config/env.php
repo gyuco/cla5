@@ -7,5 +7,3 @@ return array(
   'caching' => false,
   'cla_version' => '1.5'
 );
-
-?>

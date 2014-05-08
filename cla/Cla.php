@@ -7,7 +7,7 @@ use Pux\Dispatcher\APCDispatcher;
 use cla\Config;
 use Tracy\Debugger;
 
-class HTMLApplication extends Application {
+class Cla {
 
     public function __construct() {
         if (Config::get('env.environment') != "PROD") {
@@ -52,10 +52,6 @@ class HTMLApplication extends Application {
         $response->send();
         $controller = new \app\controllers\Notfound();
         $controller->index();
-    }
-    
-    public static function instance() {
-        return new static();
     }
     
 }
