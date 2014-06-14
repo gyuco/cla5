@@ -17,25 +17,23 @@ namespace cla;
 class Config {
 	
     protected static $config;
+    public static $env;
 
-    public function __construct() {
-    }
-    
     private static function load() {
 
-        $paths = glob(CONFIG_PATH.'*.php');
+        $files = glob(CONFIG_PATH.'*.php');
 
-        foreach($paths as $path)
+        foreach($files as $file)
         {
-            preg_match('/(\w+).php$/', $path, $params);
+            preg_match('/(\w+).php$/', $file, $params);
             $key = $params[1];
-            $config[$key] = include($path);
+            $config[$key] = include($file);
         }
         
-        $path_env = CONFIG_PATH.'environments/'.@$_SERVER['HTTP_HOST'].'/';
-        $paths = glob($path_env.'*.php');
+        $path_env = CONFIG_PATH.'environments/'.self::$env.'/';
+        $files_env = glob($path_env.'*.php');
 
-        foreach($paths as $key=>$path)
+        foreach($files_env as $key=>$path)
         {
             preg_match('/(\w+).php$/', $path, $params);
             $key = $params[1];
