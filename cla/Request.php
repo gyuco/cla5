@@ -24,6 +24,7 @@ class Request
         $this->server       = new Collection($_SERVER);
         $this->files        = new Collection($_FILES);
         $this->route        = $route;
+        $this->headers      = getallheaders();
         $this->set_paramsNamed();
     }
 
@@ -80,7 +81,12 @@ class Request
     {
         return $this->files;
     }
-
+    
+    public function headers()
+    {
+        return $this->headers;
+    }
+    
     public function isSecure()
     {
         return ($this->server->HTTPS == true);
