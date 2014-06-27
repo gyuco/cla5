@@ -20,7 +20,8 @@
             "tracy/tracy": "dev-master",
             "corneltek/pux": "dev-master",
             "league/plates": "dev-master",
-            "nategood/commando": "*"
+            "nategood/commando": "*",
+            "aura/session": "dev-develop"
     },
     "autoload": {
         "classmap": [

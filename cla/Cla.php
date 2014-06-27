@@ -40,8 +40,6 @@ class Cla {
             Registry::singleton()->set(new Request($route), 'request');
             Registry::singleton()->set(new Response(), 'response');
             
-            \app\services\Localization::configure();
-            
             echo Executor::execute($route);
         }
         else { $this->respond404(); }

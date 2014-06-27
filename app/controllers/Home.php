@@ -2,7 +2,7 @@
 
 namespace app\controllers;
 
-class Home extends \Pux\Controller {
+class Home {
 
     function __construct() {}
 
@@ -17,5 +17,3 @@ class Home extends \Pux\Controller {
     }
 
 } 
-
-?>
