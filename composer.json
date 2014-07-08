@@ -24,9 +24,6 @@
             "aura/session": "dev-develop"
     },
     "autoload": {
-        "classmap": [
-            "cla"
-        ],
         "psr-0": {
                 "app": "/",
                 "cla": "/"
