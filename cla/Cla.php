@@ -2,8 +2,6 @@
 
 namespace cla;
 
-use Pux\Executor;
-use Pux\Dispatcher\APCDispatcher;
 use cla\Config;
 use Tracy\Debugger;
 
@@ -20,29 +18,18 @@ class Cla {
     }
     
     public function run() {
-        $config = Config::get('pux');
-        $mux = $this->getRouter();
+        
         $uri = filter_input(INPUT_SERVER, 'REQUEST_URI', FILTER_SANITIZE_URL);
         
-        $mux->sort();
-        
-        if ($config['apc']) {
-            $dispatcher = new APCDispatcher($mux, array('namespace' => $config['apc_namespace'],'expiry' => $config['apc_expire']));
-            $route = $dispatcher->dispatch( $uri );
-        }
-        else { $route = $mux->dispatch( $uri ); }
+        $mux = require(APPLICATION_PATH.'routes.php');
+        $route = $mux->dispatch( $uri );
 
         if ($route) {
-            $session = include VENDOR_PATH."/aura/session/scripts/instance.php";
-            
-            Registry::singleton()->set($session, 'session');
-            Registry::singleton()->set($mux, 'mux');
-            Registry::singleton()->set(new Request($route), 'request');
-            Registry::singleton()->set(new Response(), 'response');
-            
-            echo Executor::execute($route);
+            echo Dispatcher::execute($route);
         }
-        else { $this->respond404(); }
+        else { 
+            $this->respond404();
+        }
 
     }
     
@@ -53,17 +40,5 @@ class Cla {
         $controller = new \app\controllers\Notfound();
         $controller->index();
     }
-    
-    private function getRouter() {
-        $routes = Config::get('routes');
-        
-        $mux = new \Pux\Mux();
-        
-        foreach ($routes as $id=>$route) {
-            $http = isset($route['http'])?$route['http']:'get';
-            $mux->$http($route['pattern'], [$route['class'],$route['method']], ['id' => $id]);
-        }
-        
-        return $mux;
-    }
+
 }

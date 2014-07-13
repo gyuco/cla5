@@ -4,12 +4,19 @@ namespace app\controllers;
 
 class Demo {
 
-    function __construct() {}
-
-    public function indexAction() {
-
-        echo 'OK DEMO';
-
+    private $request;
+    private $response;
+    
+    
+    public function __construct($request, $response) {
+        $this->request = $request;
+        $this->response = $response;
+    }
+    public function itemAction($id) {
+        
+        var_dump($this->request->server()->HTTP_HOST);
+        return "Product $id";
+        
     }
 
 }

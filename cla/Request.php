@@ -9,23 +9,19 @@ class Request
 
     protected $params_get;
     protected $params_post;
-    protected $params_named;
     protected $cookies;
     protected $server;
     protected $headers;
     protected $files;
-    protected $route;
     
-    public function __construct($route) {
+    public function __construct() {
         
-        $this->params_get   = new Collection($_GET);
-        $this->params_post  = new Collection($_POST);
-        $this->cookies      = new Collection($_COOKIE);
-        $this->server       = new Collection($_SERVER);
-        $this->files        = new Collection($_FILES);
-        $this->route        = $route;
+        $this->params_get   = (object)$_GET;
+        $this->params_post  = (object)$_POST;
+        $this->cookies      = (object)$_COOKIE;
+        $this->server       = (object)$_SERVER;
+        $this->files        = (object)$_FILES;
         $this->headers      = getallheaders();
-        $this->set_paramsNamed();
     }
 
     public function id($hash = true)
@@ -40,31 +36,15 @@ class Request
 
         return $this->id;
     }
-
-    public function set_paramsNamed()
-    {
-        if (isset($this->route[3]['vars'])) {
-            foreach($this->route[3]['vars'] as $key=>$value) {
-                if(!is_numeric($key)) {
-                    $this->params_named[$key] = $value;
-                }
-            }
-        }
-    }
     
-    public function paramsGet()
+    public function get()
     {
         return $this->params_get;
     }
 
-    public function paramsPost()
+    public function post()
     {
         return $this->params_post;
-    }
-
-    public function paramsNamed()
-    {
-        return new Collection($this->params_named);
     }
 
     public function cookies()

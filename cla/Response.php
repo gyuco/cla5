@@ -75,7 +75,7 @@ class Response
         $this->body($body);
         $this->code($status_code);
 
-        $this->headers = new Collection($headers);
+        $this->headers = (object)$headers;
     }
 
     public function protocolVersion($protocol_version = null)
