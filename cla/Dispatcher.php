@@ -18,7 +18,7 @@ class Dispatcher
 
         $constructArgs = array();
 
-        $services = Config::get('services');
+        $services = Config::get('container');
         $args = $rc->getConstructor()->getParameters();
         if (count($args)) {
             foreach($args as $obj) {

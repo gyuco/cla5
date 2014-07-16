@@ -98,5 +98,11 @@ class Request
     {
         return $this->server->REQUEST_METHOD;
     }
+    
+	public function cookie($name = null, $default = null)
+	{
+		return isset($this->cookies->$name) ? $this->cookies->$name : $default;
+	}
+
 
 }

@@ -5,16 +5,13 @@ namespace app\controllers;
 class Demo {
 
     private $request;
-    private $response;
     
-    
-    public function __construct($request, $response) {
+    public function __construct($request) {
         $this->request = $request;
-        $this->response = $response;
+        \app\models\DbConnect::connect();
     }
     public function itemAction($id) {
-        
-        var_dump($this->request->server()->HTTP_HOST);
+
         return "Product $id";
         
     }

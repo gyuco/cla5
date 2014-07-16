@@ -14,6 +14,5 @@ define('CONFIG_PATH', APPLICATION_PATH."system/config/");
 define('VENDOR_PATH', __DIR__ . '/vendor/');
 
 require 'vendor/autoload.php';
-
 $app = new cla\Cla();
 $app->run();

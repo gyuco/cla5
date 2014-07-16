@@ -12,7 +12,8 @@ class Response
     protected $headers;
     protected $locked = false;
     protected $sent = false;
-
+    protected $cookies = [];
+    
     public $chunked = false;
 
    protected static $http_messages = array(
@@ -199,6 +200,11 @@ class Response
             header($key .': '. $value, false);
         }
 
+		foreach($this->cookies as $cookie)
+		{
+			setcookie($cookie['name'], $cookie['value'], $cookie['ttl'], $cookie['path'], $cookie['domain'], $cookie['secure'], $cookie['httponly']);
+		}
+        
         return $this;
     }
 
@@ -368,4 +374,19 @@ class Response
 
         $this->send();
     }
+    
+	public function cookie($name, $value, $ttl = 0, array $options = []) {
+		$ttl = ($ttl === 0) ? 0 : (time() + $ttl);
+
+		$defaults = ['path' => '/', 'domain' => '', 'secure' => false, 'httponly' => false];
+
+		$this->cookies[$name] = ['name' => $name, 'value' => $value, 'ttl' => $ttl] + $options + $defaults;
+
+		return $this->send();
+	}
+    
+	public function deleteCookie($name, array $options = [])
+	{
+		return $this->cookie($name, '', -3600, $options);
+	}
 }
