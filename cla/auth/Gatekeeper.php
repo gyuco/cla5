@@ -334,8 +334,7 @@ class Gatekeeper
 	protected function authenticate($email, $password)
 	{
 		$user = $this->userProvider->getByEmailPassword($email, $password);
-        
-		if($user !== false)
+		if($user !== null)
 		{
 			if(!$user->isActivated())
 			{

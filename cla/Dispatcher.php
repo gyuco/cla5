@@ -4,12 +4,10 @@ namespace cla;
 
 use Exception;
 use ReflectionClass;
+use Pimple\Container;
 
-class Dispatcher
-{
-    /*
-     * $route: {pcre flag}, {pattern}, {callback}, {options}
-     */
+class Dispatcher {
+
     public static function execute($route)
     {
         list($pcre,$pattern,$cb,$options) = $route;
@@ -18,11 +16,14 @@ class Dispatcher
 
         $constructArgs = array();
 
-        $services = Config::get('container');
+        $container = new Container();
+        foreach (Config::get('container') as $key=>$value) {
+            $container[$key] = $value;
+        } 
         $args = $rc->getConstructor()->getParameters();
         if (count($args)) {
             foreach($args as $obj) {
-                $constructArgs[$obj->getName()] = $services[$obj->getName()];
+                $constructArgs[$obj->getName()] = $container[$obj->getName()];
             }
             $controller = $rc->newInstanceArgs($constructArgs);
         } else {
@@ -53,5 +54,6 @@ class Dispatcher
         }
         return call_user_func_array(array($controller, $method), $arguments);
     }
+
 }
 

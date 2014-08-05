@@ -18,8 +18,9 @@
             "php-activerecord/php-activerecord": "dev-master",
             "tracy/tracy": "dev-master",
             "corneltek/pux": "dev-master",
-            "league/plates": "dev-master",
-            "nategood/commando": "*"
+            "league/plates": "2.1.*@dev",
+            "codegyre/robo": "*",
+            "pimple/pimple": "~2.1"
     },
     "autoload": {
         "psr-0": {

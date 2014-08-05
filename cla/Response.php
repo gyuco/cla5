@@ -382,7 +382,7 @@ class Response
 
 		$this->cookies[$name] = ['name' => $name, 'value' => $value, 'ttl' => $ttl] + $options + $defaults;
 
-		return $this->send();
+		return $this;
 	}
     
 	public function deleteCookie($name, array $options = [])
