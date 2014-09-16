@@ -101,7 +101,11 @@ class Request
     
 	public function cookie($name = null, $default = null)
 	{
-		return isset($this->cookies->$name) ? $this->cookies->$name : $default;
+        if ( isset($this->cookies->$name) )
+        {
+            return $this->cookies->$name;
+        }
+		return $default;
 	}
 
 

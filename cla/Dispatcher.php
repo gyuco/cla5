@@ -17,7 +17,8 @@ class Dispatcher {
         $constructArgs = array();
 
         $container = new Container();
-        foreach (Config::get('container') as $key=>$value) {
+        $file = include(APPLICATION_PATH.'container.php');
+        foreach ($file as $key=>$value) {
             $container[$key] = $value;
         } 
         $args = $rc->getConstructor()->getParameters();

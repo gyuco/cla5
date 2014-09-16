@@ -12,7 +12,9 @@ define('CLA_PATH', __DIR__ . '/cla/');
 define('APPLICATION_PATH', __DIR__ . '/app/');
 define('CONFIG_PATH', APPLICATION_PATH."system/config/");
 define('VENDOR_PATH', __DIR__ . '/vendor/');
+define('ASSETS_PATH', __DIR__ . '/assets/');
 
 require 'vendor/autoload.php';
+
 $app = new cla\Cla();
 $app->run();

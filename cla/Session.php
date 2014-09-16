@@ -4,32 +4,50 @@ namespace cla;
 
 class Session {
 
+    const SESSION_STARTED = true;
+    const SESSION_NOT_STARTED = false;
+    
+    private $sessionState = self::SESSION_NOT_STARTED;
+    
     protected static $instance;
     protected $flashdata = array();
-
-    protected function __construct()
-    {
-    }
+    
+    private function __construct() {}
 
     public static function instance()
     {
-        if(empty(static::$instance))
+        if ( !isset(self::$instance))
         {
-            session_start();
-            static::$instance = new Session();
+            self::$instance = new self;
         }
-
-        return static::$instance;
+        
+        self::$instance->startSession();
+        
+        return self::$instance;
     }
 
+    public function startSession()
+    {
+        if ( $this->sessionState == self::SESSION_NOT_STARTED )
+        {
+            $this->sessionState = session_start();
+        }
+        
+        return $this->sessionState;
+    }
+    
     public function set($key, $value)
     {
         $_SESSION[$key] = $value;
     }
 
-    public function get($key, $default = null)
+    public function get($key)
     {
-        return isset($_SESSION[$key]) ? $_SESSION[$key] : $default;
+        if ( $this->exists($key) )
+        {
+            return $_SESSION[$key];
+        }
+        
     }
 
     public function delete($key)
@@ -68,7 +86,14 @@ class Session {
 
     public function destroy()
     {
-        return session_destroy();
+        if ( $this->sessionState == self::SESSION_STARTED )
+        {
+            $this->sessionState = !session_destroy();
+            unset( $_SESSION );
+            return !$this->sessionState;
+        }
+        
+        return false;
     }
 
     public static function __callStatic($name, $arguments)
