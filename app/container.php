@@ -2,9 +2,9 @@
 
 return array(
     'request' => function () {
-            return new \cla\Request();
+            return new \cla\http\Request;
         },
     'response' => function () {
-            return new \cla\Response2();
+            return new \cla\http\Response();
         }
 );

@@ -1,6 +1,6 @@
 <?php
 
-namespace cla;
+namespace cla\http;
 
 class Request
 {
