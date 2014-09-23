@@ -21,7 +21,7 @@ class Config {
 
     private static function load() {
 
-        $files = glob(CONFIG_PATH.'*.php');
+        $files = glob(APPS_PATH.'common/config/*.php');
 
         foreach($files as $file)
         {
@@ -30,7 +30,7 @@ class Config {
             $config[$key] = include($file);
         }
         
-        $path_env = CONFIG_PATH.'environments/'.self::$env.'/';
+        $path_env = APPS_PATH.self::$env.'/config/';
         $files_env = glob($path_env.'*.php');
 
         foreach($files_env as $key=>$path)
@@ -72,4 +72,7 @@ class Config {
         }
     }
     
+    public static function requireRoutesEnv() {
+        return APPS_PATH.self::$env.'/routes.php';
+    }
 }

@@ -17,7 +17,7 @@ class Dispatcher {
         $constructArgs = array();
 
         $container = new Container();
-        $file = include(APPLICATION_PATH.'container.php');
+        $file = include(APPS_PATH.'common/container.php');
         foreach ($file as $key=>$value) {
             $container[$key] = $value;
         } 

@@ -21,7 +21,7 @@ class Cla {
         
         $uri = filter_input(INPUT_SERVER, 'REQUEST_URI', FILTER_SANITIZE_URL);
         
-        $mux = require(APPLICATION_PATH.'routes.php');
+        $mux = require(APPS_PATH.'common/routes.php');
         $route = $mux->dispatch( $uri );
 
         if ($route) {
@@ -37,7 +37,7 @@ class Cla {
         $response = new \cla\http\Response();
         $response->code(404);
         $response->send();
-        $controller = new \app\controllers\Notfound();
+        $controller = new \lib\controllers\Notfound();
         $controller->index();
     }
 
