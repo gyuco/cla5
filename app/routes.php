@@ -2,11 +2,6 @@
 
 $mux = new \Pux\Mux;
 
-$mux->get('/product/:id', ['\app\controllers\Demo','itemAction'], 
-[
-    'id' => 'product'
-]);
-
 $mux->get('/', ['\app\controllers\Home','indexAction'], 
 [
     'id' => 'home'

@@ -34,8 +34,10 @@ class Cla {
     }
     
     private function respond404() {
-        \app\services\ResponseService::init()->send(404);
-        $controller = new \app\controllers\Notfound( new \app\services\PlatesService() );
+        $response = new \cla\http\Response();
+        $response->code(404);
+        $response->send();
+        $controller = new \app\controllers\Notfound();
         $controller->index();
     }
 
