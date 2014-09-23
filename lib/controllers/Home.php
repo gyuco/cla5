@@ -1,6 +1,6 @@
 <?php
 
-namespace app\controllers;
+namespace lib\controllers;
 
 class Home {
 
@@ -8,7 +8,7 @@ class Home {
 
     public function indexAction() {
 
-        $engine = new \League\Plates\Engine(APPLICATION_PATH.'/views', 'phtml');
+        $engine = new \League\Plates\Engine(LIB_PATH.'/views', 'phtml');
         $template = new \League\Plates\Template($engine);
         $template->title = "Cla framework";
         

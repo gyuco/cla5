@@ -1,12 +1,11 @@
 <?php
 
-namespace app\controllers;
+namespace lib\controllers;
 
 class Demo {
 
     private $request;
     private $response;
-    
     
     public function __construct($request, $response) {
         $this->request = $request;

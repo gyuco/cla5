@@ -8,8 +8,8 @@
 
 //with trailing slash
 define('CLA_PATH', __DIR__ . '/cla/');
-define('APPLICATION_PATH', __DIR__ . '/app/');
-define('CONFIG_PATH', APPLICATION_PATH."system/config/");
+define('APPS_PATH', __DIR__ . '/app/');
+define('CONFIG_PATH', APPS_PATH."system/config/");
 define('VENDOR_PATH', __DIR__ . '/vendor/');
 
 require_once 'vendor/autoload.php';

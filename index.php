@@ -9,8 +9,8 @@
 
 //with trailing slash
 define('CLA_PATH', __DIR__ . '/cla/');
-define('APPLICATION_PATH', __DIR__ . '/app/');
-define('CONFIG_PATH', APPLICATION_PATH."system/config/");
+define('LIB_PATH', __DIR__ . '/lib/');
+define('APPS_PATH', __DIR__ . '/apps/');
 define('VENDOR_PATH', __DIR__ . '/vendor/');
 
 require 'vendor/autoload.php';
