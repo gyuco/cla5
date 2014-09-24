@@ -29,7 +29,6 @@ class Config {
             $key = $params[1];
             $config[$key] = include($file);
         }
-        
         $path_env = APPS_PATH.self::$env.'/config/';
         $files_env = glob($path_env.'*.php');
 
@@ -72,7 +71,7 @@ class Config {
         }
     }
     
-    public static function requireRoutesEnv() {
-        return APPS_PATH.self::$env.'/routes.php';
-    }
+//    public static function requireRoutesEnv() {
+//        return APPS_PATH.self::$env.'/routes.php';
+//    }
 }

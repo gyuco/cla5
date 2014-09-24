@@ -9,7 +9,7 @@ class Cla {
 
     public function __construct() {
         Config::$env = filter_input(INPUT_SERVER, 'HTTP_HOST');
-        if (Config::get('env.environment') != "PROD") {
+        if (Config::get('system.environment') != "PROD") {
             Debugger::enable(false);
         }
         else {
@@ -20,8 +20,7 @@ class Cla {
     public function run() {
         
         $uri = filter_input(INPUT_SERVER, 'REQUEST_URI', FILTER_SANITIZE_URL);
-        
-        $mux = require(APPS_PATH.'common/routes.php');
+        $mux = require( sprintf(Config::get('system.routes_path'), Config::$env) );
         $route = $mux->dispatch( $uri );
 
         if ($route) {
