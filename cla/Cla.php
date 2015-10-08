@@ -36,7 +36,7 @@ class Cla {
         $response = new \cla\http\Response();
         $response->code(404);
         $response->send();
-        $controller = new \lib\controllers\Notfound();
+        $controller = new \lib\controllers\Notfound( new \lib\services\DomView() );
         $controller->index();
     }
 

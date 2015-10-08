@@ -4,16 +4,23 @@ namespace lib\controllers;
 
 class Notfound {
 
-    function __construct() {
+    private $view;
+    
+    function __construct($view) {
+        $this->view = $view;
     }
 
     public function index() {
         
-        $engine = new \League\Plates\Engine(LIB_PATH.'/views', 'phtml');
-        $template = new \League\Plates\Template($engine);
-        $template->title = "Cla framework - not found";
+        $this->view->setTemplate('default.phtml');
+        $this->view->assets('default');
         
-        echo $template->render('default');
+        $this->view->setTitle('Cla - not found');
+        $this->view->appendMetaTag('description', 'description not found');
+
+        $this->view->setValue('#container', '404 - not found');
+        
+        $this->view->render();
 
     }
 

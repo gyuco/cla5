@@ -13,6 +13,7 @@ define('LIB_PATH', __DIR__ . '/lib/');
 define('APPS_PATH', __DIR__ . '/apps/');
 define('VENDOR_PATH', __DIR__ . '/vendor/');
 define('ASSETS_PATH', __DIR__ . '/assets/');
+define('SYSTEM_PATH', __DIR__ . '/system/');
 
 require 'vendor/autoload.php';
 

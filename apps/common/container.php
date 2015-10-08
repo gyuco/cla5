@@ -10,8 +10,10 @@ return array(
     'session' => function () {
         return cla\Session::instance();
     },
-    'plates' => function () {
-        return new \app\services\PlatesService();
-    }
-            
+    'db' => function () {
+        return \lib\services\DbService::connect();
+    },
+    'view' => function () {
+        return new \lib\services\DomView();
+    } 
 );

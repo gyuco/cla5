@@ -6,6 +6,8 @@ define('APPS_PATH', __DIR__ . '/apps/');
 define('VENDOR_PATH', __DIR__ . '/vendor/');
 define('SYSTEM_PATH', __DIR__ . '/system/');
 
+use cla\Config;
+
 class RoboFile extends \Robo\Tasks
 {
     private $env;
@@ -14,19 +16,7 @@ class RoboFile extends \Robo\Tasks
     {
         $this->yell('Cla robo');
     }
-    
-    public static $setup = "Setup Cla application";
-    public function setup()
-    {
-        $this->taskFileSystemStack()
-             ->chmod('system/logs/', 777)
-             ->chmod('system/cache/', 777)
-             ->run();
-        
-        $this->pux();
-    }
-    
-    public static $createdb = "Create a mysql database";
+
     public function createdb()
     {
         $host = $this->ask('Database host?');
@@ -61,7 +51,6 @@ class RoboFile extends \Robo\Tasks
         $this->yell('DONE!');
     }
     
-    public static $createvirtualhost = "Create a apache virtualhost";
     public function createvirtualhost()
     {
         $servername = $this->ask('Servername?');
@@ -99,8 +88,7 @@ class RoboFile extends \Robo\Tasks
         
     }
     
-    public static $pux = "pux utilities";
-    public function pux()
+    public function compile_routes()
     {
         $this->env = $this->ask('Please, set environment: '.$this->getEnvs());
         $mux_file = APPS_PATH.$this->env.'/mux.php';
@@ -124,19 +112,32 @@ class RoboFile extends \Robo\Tasks
         
     }
     
-    public static $help = "List of commands";
-    public function help() {
-        $rClass = new ReflectionClass($this);
-        $methods = $rClass->getMethods(ReflectionMethod::IS_PUBLIC);
-            echo "==============================================".PHP_EOL;
-            echo "=================CLA CONSOLE==================".PHP_EOL;
-            echo "==============================================".PHP_EOL.PHP_EOL;
-        foreach($methods as $method) {
-            $methodName = $method->getName();
-            echo $methodName.PHP_EOL.self::$$methodName.PHP_EOL;
-            echo "==============================================".PHP_EOL;
-        }
-        exit;
+    public function backupmysql() {
+        Config::$env = 'cli';
+        $location = Config::get('system.backup_dir');
+        $mysql = Config::get('database.default');
+        $db = Config::get('database.db_name');
+ 
+        $today = Date('Y_m_d');
+        $filename = $location.$db.'_'.$today.'.sql';
+        $this->taskExec("mysqldump -u{$mysql['db_user']} -p{$mysql['db_pass']} {$db} > ".$filename)
+            ->run();
+
+        $this->taskExec("gzip ".$filename)
+            ->run();
+
+    }
+
+    public function createpo($env) {
+        Config::$env = $env;
+        $gt = new \cli\Gettext();
+        $gt->createPo();
+    }
+    
+    public function createmo($env) {
+        Config::$env = $env;
+        $gt = new \cli\Gettext();
+        $gt->createMo();
     }
     
     private function getEnvs() {

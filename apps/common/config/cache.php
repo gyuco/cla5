@@ -14,11 +14,12 @@ return array(
         'timeout' => 0,
         'servers' => array(
             'server1' => array(
-                'server' => 'localhost',
+                'server' => '127.0.0.1',
                 'port' => 11211,
                 'persistent_connection' => true,
                 'weight' => 1
             )
-        )
+        ),
+        'expire'=>60000
     )
 );
